@@ -1,0 +1,19 @@
+{
+  "name": "floppy-fish",
+  "version": "0.0.1",
+  "description": "A game of survival",
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-util": "~2.2.13",
+    "gulp-browserify": "~0.4.1",
+    "gulp-concat": "~2.1.7",
+    "napa": "~0.3.0"
+  },
+  "scripts": {
+    "install": "napa"
+  },
+  "napa": {
+    "angular": "angular/bower-angular",
+    "angular-route": "angular/bower-angular-route"
+  }
+}
