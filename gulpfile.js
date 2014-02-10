@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task('scripts', ['scripts-bundle']);
 
 gulp.task('scripts-bundle', function () {
-  return gulp.src('src/app/game.js')
+  return gulp.src('src/game.js')
     .pipe(browserify({
       debug: true
     }))
