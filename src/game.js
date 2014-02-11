@@ -4,10 +4,19 @@
  * This is the file to kick off everything
  **/
 
-require('angular/angular');
-require('angular-route/angular-route');
+var Phaser = require('phaser/phaser');
 
-var app = angular.module('floppyFish', ['ngRoute']),
-    home = require('./modules/home/home');
+var game = new Phaser.Game(800, 600, Phaser.AUTO, "", {
+  preload: preload,
+  create: create,
+  update: update
+});
 
-home.init(app);
+function preload () {
+}
+
+function create () {
+}
+
+function update () {
+}

@@ -13,7 +13,6 @@
     "install": "napa"
   },
   "napa": {
-    "angular": "angular/bower-angular",
-    "angular-route": "angular/bower-angular-route"
+    "phaser": "nDmitry/bower-phaser"
   }
 }
