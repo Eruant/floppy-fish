@@ -7,7 +7,21 @@
 require('angular/angular');
 require('angular-route/angular-route');
 
-var app = angular.module('flappyFish', ['ngRoute']),
-    home = require('./modules/home/home');
+var app = angular.module('flappyFish', ['ngRoute']);
 
-home.init(app);
+console.log(app);
+
+app.config(function ($routeProvider) {
+  $routeProvider.when('/', {
+    controller: 'homeController',
+    templateUrl: './modules/home/home.html'
+  }).otherwise({
+    redirectTo: '/404'
+  });
+  console.log('finished config');
+});
+
+app.controller('homeController', function ($scope) {
+  console.log('main controller');
+  $scope.title = 'A title';
+});

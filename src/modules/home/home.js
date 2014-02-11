@@ -2,34 +2,25 @@
  * home module
  **/
 
-var angular = require('angular/angular'),
-    angularRoute = require('angular-route/angular-route');
+require('angular/angular');
+require('angular-route/angular-route');
 
-exports.init = function (app) {
+exports.init = function () {
 
-  console.log('home init');
-
-  app.config(function ($routeProvider) {
+  angular.module('flappyFish').config(function ($routeProvider) {
+    console.log('init config', $routeProvider);
     $routeProvider.when('/', {
-      redirectTo: '/home'
-    });
-
-    console.log('should have re-directed');
-    
-    /*.when('/home', {
       controller: 'homeController',
-      templateUrl: 'modules/home/home.html'
-    });*/
+      templateUrl: './modules/home/home.html'
+    });
+  });
+
+  angular.module('flappyFish').controller('homeController', function ($scope) {
+    console.log('created home controller!');
+    $scope.title = 'a title';
   });
 
   /*
-  app.controller('homeController', function ($scope, homeFactory) {
-    console.log('created home controller!');
-    $scope.title = "HOME PAGE";
-
-    homeFacory.getHome();
-  });
-
   app.factory('homeFactory', function ($http) {
     return {
       getHome: function () {
