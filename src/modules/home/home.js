@@ -2,20 +2,19 @@
  * home module
  **/
 
-require('angular/angular');
-require('angular-route/angular-route');
+var angular = require('angular/angular'),
+    angularRoute = require('angular-route/angular-route');
 
-exports.init = function () {
+exports.init = function (app) {
 
-  angular.module('flappyFish').config(function ($routeProvider) {
-    console.log('init config', $routeProvider);
+  app.config(function ($routeProvider) {
     $routeProvider.when('/', {
       controller: 'homeController',
       templateUrl: './modules/home/home.html'
     });
   });
 
-  angular.module('flappyFish').controller('homeController', function ($scope) {
+  app.controller('homeController', function ($scope) {
     console.log('created home controller!');
     $scope.title = 'a title';
   });
