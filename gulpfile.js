@@ -26,7 +26,12 @@ gulp.task('data', function () {
     .pipe(gulp.dest('bin/'));
 });
 
-gulp.task('compile', ['scripts', 'markup', 'data']);
+gulp.task('assets', function () {
+  return gulp.src('src/*.png')
+    .pipe(gulp.dest('bin/'));
+});
+
+gulp.task('compile', ['scripts', 'markup', 'data', 'assets']);
 
 gulp.task('watch', function () {
   return gulp.watch('src/**/*', ['compile']);
