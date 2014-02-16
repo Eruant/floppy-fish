@@ -1,6 +1,7 @@
 var Phaser = require('phaser/phaser'),
     boot = require('./boot'),
-    preloader = require('./preloader');
+    preloader = require('./preloader'),
+    mainMenu = require('./mainMenu');
 
 module.exports = {
 
@@ -9,7 +10,7 @@ module.exports = {
 
     this.game.state.add('Boot', boot, false);
     this.game.state.add('Preloader', preloader, false);
-    //this.game.state.add('MainMenu', MainMenu, false);
+    this.game.state.add('MainMenu', mainMenu, false);
     //this.game.state.add('Level1', Level1, false);
 
     this.game.state.start('Boot');

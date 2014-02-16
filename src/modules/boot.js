@@ -1,7 +1,7 @@
 module.exports = {
 
   preload: function () {
-    this.load.image('preloadBar', 'img/loader.png');
+    this.load.image('preloadBar', 'img/boot_loadingBar.png');
   },
 
   create: function () {
