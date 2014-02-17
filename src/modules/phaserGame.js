@@ -1,19 +1,20 @@
 var Phaser = require('phaser/phaser'),
     boot = require('./boot'),
     preloader = require('./preloader'),
-    mainMenu = require('./mainMenu');
+    mainMenu = require('./mainMenu'),
+    level1 = require('./level1');
 
 module.exports = {
 
   constructor: function () {
     this.game = new Phaser.Game(480, 320, Phaser.AUTO, 'content', null);
 
-    this.game.state.add('Boot', boot, false);
-    this.game.state.add('Preloader', preloader, false);
-    this.game.state.add('MainMenu', mainMenu, false);
-    //this.game.state.add('Level1', Level1, false);
+    this.game.state.add('boot', boot, false);
+    this.game.state.add('preloader', preloader, false);
+    this.game.state.add('mainMenu', mainMenu, false);
+    this.game.state.add('level1', level1, false);
 
-    this.game.state.start('Boot');
+    this.game.state.start('boot');
   }
 
 };

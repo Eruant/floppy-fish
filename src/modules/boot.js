@@ -18,7 +18,7 @@ module.exports = {
       // we are on a mobile
     }
 
-    this.game.state.start('Preloader', true, false);
+    this.game.state.start('preloader', true, false);
   }
 
 };

@@ -31,7 +31,7 @@ module.exports = {
   },
 
   startGame: function () {
-    console.log('start game');
+    this.game.state.start('level1', true, false);
   }
 
 };

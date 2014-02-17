@@ -12,6 +12,7 @@ module.exports = {
 
     // load game assets
     this.game.load.image('menu_background', 'img/menu_background.png');
+    this.game.load.image('game_background', 'img/game_background.jpg');
   },
 
   create: function () {
@@ -23,7 +24,7 @@ module.exports = {
   },
 
   startMainMenu: function () {
-    this.game.state.start('MainMenu', true, false);
+    this.game.state.start('mainMenu', true, false);
   }
 
 };
