@@ -11,7 +11,6 @@ module.exports = {
     this.load.setPreloadSprite(this.preloadBar);
 
     // load game assets
-    this.game.load.image('menu_background', 'img/menu_background.png');
     this.game.load.image('game_background', 'img/game_background.jpg');
   },
 
