@@ -4,10 +4,12 @@ module.exports = {
 
   preload: function () {
 
-    var x = (this.game.width / 2);
-    var y = (this.game.height / 2);
+    var x = this.game.world.centerX;
+    var y = this.game.world.centerY;
 
     this.preloadBar = this.add.sprite(x, y, 'preloadBar');
+    this.preloadBar.anchor.x = 0.5;
+    this.preloadBar.anchor.y = 0.5;
     this.load.setPreloadSprite(this.preloadBar);
 
     // load game assets
